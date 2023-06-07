@@ -29,11 +29,6 @@ import InTheLoop from "../assets/intheloop.svg";
 import Portfolio from "../assets/portfolio.svg";
 import Sudoku from "../assets/sudoku.svg";
 
-interface ToggleButtonProps {
-  color1: string;
-  color2: string;
-}
-
 const ToggleButtons: React.FC = () => {
   const [showButton1, setShowButton1] = useState(true);
   const [showButton2, setShowButton2] = useState(true);
@@ -92,7 +87,7 @@ const ToggleButtons: React.FC = () => {
             >
               Projects
             </h1>
-            <div className="flex">
+            <div className="flex flex-col md:flex-row">
               <div data-aos="fade-in" data-aos-duration="750">
                 <Cards
                   name="Technologent"
@@ -151,7 +146,7 @@ const ToggleButtons: React.FC = () => {
             >
               Abilities
             </h1>
-            <div className="flex center">
+            <div className="flex flex-col md:flex-row center">
               <div
                 className={`${style.skillPanel} mr-4`}
                 data-aos="fade-in"

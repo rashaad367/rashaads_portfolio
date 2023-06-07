@@ -24,22 +24,21 @@ html {
 }
 
 .heading {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 4rem;        
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
     color: #020202;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
     text-transform: uppercase;
     background: #000000;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+
 .sub-heading {
-    font-family: 'Arial Black', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;        
     color: #020202;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .down-arrow {
@@ -66,7 +65,7 @@ html {
 hr {
     background-color: #000000;
     height: 2px;
-} 
+}
 
 $ani-speed: 2s;
 
@@ -202,5 +201,36 @@ $ani-speed: 2s;
     100% { 
         opacity: 0;
         top: 200px;
+    }
+}
+
+// Responsive CSS
+@media (max-width: 375px) {
+    .container-lg {
+        font-size: 1rem;
+    }
+
+    .container {
+        font-size: 1rem;
+        
+    }
+
+    .heading {
+        font-size: 2rem;
+        margin-right: .5rem;
+    }
+
+    .sub-heading {
+        font-size: 1.6rem;
+    }
+
+    .contact-flex {
+        flex-direction: row;
+    }
+
+    .magic-mirror {
+        height: auto;
+        max-width: 1080px;
+        margin: 0 auto;
     }
 }

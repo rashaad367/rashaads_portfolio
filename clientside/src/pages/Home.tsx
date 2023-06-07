@@ -4,7 +4,6 @@ import githubIcon from "../assets/github.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 import ToggleButtons from "../components/ToggleButtons";
 import ScrollArrowState from "../components/ScrollArrowState";
-import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -13,20 +12,9 @@ const Home: React.FC = () => {
   const linkedinUrl = "https://www.linkedin.com/in/rashaad-jones-5a59b6220";
   AOS.init({ once: true });
 
-  axios
-    .get("http://localhost:3000/api/data")
-    .then((response) => {
-      console.log(response.data);
-      // Handle response data
-    })
-    .catch((error) => {
-      console.error(error);
-      // Handle errors
-    });
-
   return (
     <div>
-      <div className="flex flex-col">
+      <div className="flex flex-col mb-20">
         <div className="mt-8 mb-16">
           <h1
             className="heading container-lg"
@@ -72,7 +60,7 @@ const Home: React.FC = () => {
               </h1>
               <div data-aos="fade-in" data-aos-duration="3000">
                 <h2>University of North Carolina at Charlotte</h2>
-                <p>with Bachelor of Science a in Computer Science, </p>
+                <p>with Bachelor of Science in Computer Science, </p>
                 <p>a concentration in Software Engineering, </p>
                 <p>a minor in Psyhcology, and a GPA of 3.69</p>
               </div>
@@ -100,11 +88,6 @@ const Home: React.FC = () => {
             altText="LinkedIn"
           />
         </div>
-
-        {/* Rest of application */}
-        <footer className="footer">
-          <h1>...</h1>
-        </footer>
       </div>
     </div>
   );

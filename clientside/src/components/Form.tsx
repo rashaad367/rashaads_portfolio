@@ -35,11 +35,13 @@ const Form: React.FC = () => {
 
   return (
     <div>
-      <div className={`container flex mx-auto ${style.background}`}>
+      <div
+        className={`container flex flex-col md:flex-row mx-auto ${style.background}`}
+      >
         <ToastContainer position="top-center" />
 
         <form
-          className="max-w-md bg-white shadow-md w-1/2 px-8 pt-6 pb-12"
+          className="max-w-md bg-white shadow-md w-full md:w-1/2 px-8 pt-6 pb-12"
           onSubmit={handleSubmit}
         >
           <div className="mb-4">
@@ -98,7 +100,7 @@ const Form: React.FC = () => {
             </div>
           </div>
         </form>
-        <div className="max-w-md w-1/2 px-8 pt-6 pb-12 my-auto">
+        <div className="max-w-md w-full md:w-1/2 px-8 pt-6 pb-12 my-auto">
           <p className="sub-heading">
             {"I look foward to chatting it up with you. "}
           </p>
